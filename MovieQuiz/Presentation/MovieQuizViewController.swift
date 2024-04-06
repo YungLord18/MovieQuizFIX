@@ -14,7 +14,7 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
             self?.show(quiz: viewModel)
         }
     }
-    
+    // MARK: - Properties
     private var questionFactory: QuestionFactoryProtocol?
     private var currentQuestionIndex: Int = 0
     private var correctAnswers: Int = 0
