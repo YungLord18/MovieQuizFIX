@@ -73,8 +73,8 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
     
     private func showAnswerResult(isCorrect: Bool) {
         guard currentQuestion != nil else {
-                    return
-                }
+            return
+        }
         statisticService?.updateGameStats(isCorrect: isCorrect)
         
         blockButton.isEnabled = false
@@ -109,7 +109,7 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
             let completedGamesCount = "Количество сыгранных квизов: \(statisticService.gamesCount)"
             let bestGame = statisticService.bestGame
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd.MM.yyyy"
+            dateFormatter.dateFormat = "dd.MM.yy HH:mm"
             let dateString = dateFormatter.string(from: bestGame.date)
             let bestGameInfo = "Рекорд: \(bestGame.correct)/\(bestGame.total) (\(dateString))"
             let averageAccuracy = String(format: "Средняя точность: %.2f%%", statisticService.totalAccuracy * 100)
