@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1914F7652BDB005A00F76503 /* MovieQuizPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1914F7642BDB005A00F76503 /* MovieQuizPresenterTest.swift */; };
 		194D64D42BB071FA0059F3E9 /* StatisticServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194D64D32BB071FA0059F3E9 /* StatisticServiceImplementation.swift */; };
 		194D64D62BB4A93C0059F3E9 /* StatisticService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194D64D52BB4A93C0059F3E9 /* StatisticService.swift */; };
 		194D64D82BB5BB460059F3E9 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194D64D72BB5BB460059F3E9 /* UserDefaults.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1914F7642BDB005A00F76503 /* MovieQuizPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQuizPresenterTest.swift; sourceTree = "<group>"; };
 		194D64D32BB071FA0059F3E9 /* StatisticServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticServiceImplementation.swift; sourceTree = "<group>"; };
 		194D64D52BB4A93C0059F3E9 /* StatisticService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticService.swift; sourceTree = "<group>"; };
 		194D64D72BB5BB460059F3E9 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				19719BC32BC9589C00A42225 /* ArrayTests.swift */,
 				19719BC52BC9958700A42225 /* MoviesLoaderTests.swift */,
+				1914F7642BDB005A00F76503 /* MovieQuizPresenterTest.swift */,
 			);
 			path = MovieQuizTests;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1914F7652BDB005A00F76503 /* MovieQuizPresenterTest.swift in Sources */,
 				19719BC62BC9958700A42225 /* MoviesLoaderTests.swift in Sources */,
 				19719BC42BC9589C00A42225 /* ArrayTests.swift in Sources */,
 			);

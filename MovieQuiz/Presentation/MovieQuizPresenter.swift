@@ -6,7 +6,7 @@ final class MovieQuizPresenter {
     
     var questionFactory: QuestionFactoryProtocol?
     var statisticService: StatisticService?
-    weak var viewController: MovieQuizViewController?
+    weak var viewController: MovieQuizViewControllerProtocol?
     
     // MARK: - Private Properties
     
@@ -18,12 +18,12 @@ final class MovieQuizPresenter {
     
     // MARK: - Public methods
     
-    init(viewController: MovieQuizViewController) {
+    init(viewController: MovieQuizViewControllerProtocol) {
         self.viewController = viewController
         questionFactory = QuestionFactory(delegate: self)
         viewController.showLoadingIndicator()
         statisticService = StatisticServiceImplementation()
-        viewController.alertPresenter = AlertPresenter(viewController: viewController)
+        
         questionFactory?.loadData()
     }
     
@@ -52,9 +52,7 @@ final class MovieQuizPresenter {
         guard let statisticService = statisticService else {
             return "Ошибка"
         }
-        let correctAnswers = correctAnswers
-        let totalQuestions = questionsAmount
-        statisticService.store(correct: correctAnswers, total: totalQuestions)
+        statisticService.store(correct: correctAnswers, total: questionsAmount)
         let text = "Ваш результат: \(correctAnswers)/10"
         let completedGamesCount = "Количество сыгранных квизов: \(statisticService.gamesCount)"
         let bestGame = statisticService.bestGame
